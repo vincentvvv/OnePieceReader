@@ -17,6 +17,7 @@ export default function Vincent() {
           <input value={state.chapter} onInput={(e) => {setState({...state, chapter: parseInt(e.target.value) })}}/>
         <button type="button" class="btn btn-primary" onClick={() => {setState({...state, page: state.page + 1})}}>Next</button>
         <button type="button" class="btn btn-primary" onClick={() => {setState({...state, page: state.page - 1})}}>Back</button>
+        <button type="button" class="btn btn-primary" onClick={() => {setState({chapter: state.chapter + 1, page: 1})}}>Next chapter</button>
         </div>
         <p style={{color: "white"}}>{state.chapter} - {state.page}</p>
         <img
